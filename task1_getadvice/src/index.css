@@ -1,0 +1,43 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.container{
+  width: 80%;
+  margin: 70px auto;
+  /* border: 1px solid red; */
+  text-align: center;
+  background-color: blanchedalmond;
+  box-shadow: -2px 5px 23px -6px rgba(0,0,0,0.75);
+  padding: 20px;
+  position: relative;
+}
+p{
+  margin: 20px 0;
+  color:crimson;
+  font-weight: bold;
+}
+span{
+  color: #000;
+}
+
+button{
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  width: 120px;
+  height: 40px;
+  background-color: crimson;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  border: 1px solid crimson;
+  border-radius: 8px;
+}
