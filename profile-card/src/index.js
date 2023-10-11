@@ -52,12 +52,12 @@ function SkillList(){
 
   return(
     <div className="skills-list">
-      <Skill skill = "HTML" emoji="🧡" color= "rgba(255, 140, 0,0.2)"/>
-      <Skill skill = "CSS" emoji="💙" color= "rgba(32, 178, 170,0.5)"/>
-      <Skill skill = "React" emoji="❤️‍🔥" color= "rgba(220, 20, 60,0.5)"/> 
-      <Skill skill = "Git& Github" emoji="💚" color= "rgba(144, 238, 144,0.5)"/> 
-      <Skill skill = "Flutter" emoji="💜" color= "rgba(147, 112, 219,0.5)"/> 
-      <Skill skill = "Python" emoji="🤍" color= "rgba(211, 211, 211,0.5)"/> 
+      <Skill skill = "HTML" emoji="🧡" color= "rgba(255, 140, 0,0.2)" level="advanced"/>
+      <Skill skill = "CSS" emoji="💙" color= "rgba(32, 178, 170,0.5)" level="Intermediate"/>
+      <Skill skill = "React" emoji="❤️‍🔥" color= "rgba(220, 20, 60,0.5)" level="Intermediate"/> 
+      <Skill skill = "Git& Github" emoji="💚" color= "rgba(144, 238, 144,0.5)" level="Intermediate"/> 
+      <Skill skill = "Flutter" emoji="💜" color= "rgba(147, 112, 219,0.5)" level="Beginner"/> 
+      <Skill skill = "Python" emoji="🤍" color= "rgba(211, 211, 211,0.5)" level="Intermediate"/> 
 
 
     </div>
@@ -70,6 +70,13 @@ function Skill(props){
 
 <span>{props.skill}</span>
  <span>{props.emoji}</span>
+
+ <span>
+  { props.level === 'Beginner' && " 👶"}
+  { props.level === 'Intermediate' && " 👍"}
+  { props.level === 'advanced' && " 💪"}  
+  </span>
+
 
     </div>
   
