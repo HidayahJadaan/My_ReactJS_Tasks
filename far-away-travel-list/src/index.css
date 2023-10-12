@@ -95,7 +95,7 @@ input {
 }
 
 
-/* 
+
 .actions button,
 .list select {
   text-transform: uppercase;
@@ -132,4 +132,4 @@ input[type="checkbox"] {
   text-align: center;
   font-weight: 700;
   padding: 3.2rem 0;
-} */
+}
