@@ -1,5 +1,7 @@
 
  * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -7,6 +9,19 @@ body {
   font-family: sans-serif;
   color: #333;
 }
+
+.Header {
+  text-align: center;
+  background-color: #7950f2;
+  font-family: "Monoton";
+  font-size: 8rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  word-spacing: 30px;
+  letter-spacing: -5px;
+  padding: 2.4rem 0;
+}
+
 
 .steps {
   width: 600px;
@@ -79,7 +94,7 @@ h3 {
 .close {
   position: absolute;
   top: 16px;
-  right: 16px;
+  right: 26px;
   border: none;
   background: none;
   cursor: pointer;
