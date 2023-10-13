@@ -51,8 +51,8 @@ function Form({onAddItems}) {
 if(!description) return;
 
     // console.log(e)
-    const newItem = { id:7, description, quantity, packed:false};
-    console.log(newItem);
+    const newItem = { id:Date.now(), description, quantity, packed:false};
+    // console.log(newItem);
     // initialItems.push(newItem);
     // console.log(initialItems)
 
