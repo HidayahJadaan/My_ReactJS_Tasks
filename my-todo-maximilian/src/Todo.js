@@ -27,9 +27,9 @@ export default function Todo({ title, text }) {
         </div>
       </div>
 
-     {ModalIsOpen && <Modal /> }
-    
-     { ModalIsOpen &&  <Backdrop onCancel = {closeModalHandler} />}
+     {ModalIsOpen && <Modal />}
+
+     {ModalIsOpen && <Backdrop onCancel={()=> closeModalHandler} /> } 
 
      </div>
   );
