@@ -1,19 +1,27 @@
-import "./App.css";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home"
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Create from './components/Create';
 
 function App() {
-  const title = "Welcome to the new blog";
-  const likes = 50;
-  const person = { name: "Hidayah", age: 30 };
-
   return (
-    <div className="app">
-        <Navbar />
-      <div className="content">
-       <Home />
-      </div>
-    </div>
+   <div className='app'>
+    <Navbar />
+     <BrowserRouter>
+       <Routes>
+        <Route path="/">
+          <Route index element={<div className='content'>
+            <Home />
+          </div>} />
+          <Route path="create" element={<div className='content'>
+            <Create />
+          </div>} />
+
+        </Route>
+      </Routes>
+    </BrowserRouter>
+   </div>
   );
 }
+
 export default App;
