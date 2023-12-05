@@ -1,0 +1,9 @@
+// CREATING REACT APP USING vite
+1. npm create vite@version ---> vite@latest
+2. npm install --> we should install node_modules manually
+3. npm run dev --> to run the application
+4. installing other packages --> npm install eslint vite-plugin-eslint eslint-config-react-app --save-dev
+5. create .eslintrc.json --> so we can basically configure the behabior of ESLint (to extend eslint rule with those in react rules)
+6. Config --> vite.config.js about development -- > import eslint from "vite-plugin-eslint"
+and add eslint() to the array
+7. npm install react-router-dom@version
