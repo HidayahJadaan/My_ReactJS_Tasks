@@ -13,7 +13,9 @@ export default function HomePage() {
 {/* We don't need this because it make the page re-loaded */}
 {/* <a href="/pricing">Pricing</a> */}
 
-<Link to="/pricing">Pricing</Link>
+<Link to="/pricing">Pricing</Link><br/>
+<Link to="/app">Go to the app</Link>
+
     </div>
   )
 }
