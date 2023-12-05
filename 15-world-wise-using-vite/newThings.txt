@@ -7,3 +7,8 @@
 6. Config --> vite.config.js about development -- > import eslint from "vite-plugin-eslint"
 and add eslint() to the array
 7. npm install react-router-dom@version
+8. Different Styling Options --> Go Back To Slides
+NOTE: index.css --> Global CSS Styling (No Classes)
+9. if we wanna use global css styling inside any css modules:
+--> :global(selector){ Styling....}
+--> .nav :global(.active){Styling...} ==> active class provided externally from react router --> activating the page that is selected now
