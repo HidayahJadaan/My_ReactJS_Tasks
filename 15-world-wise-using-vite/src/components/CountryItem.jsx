@@ -1,4 +1,5 @@
 import styles from "./CountryItem.module.css";
+import PropTypes from 'prop-types';
 
 function CountryItem({ country }) {
   return (
@@ -8,5 +9,7 @@ function CountryItem({ country }) {
     </li>
   );
 }
-
+CountryItem.propTypes = {
+  country: PropTypes.object.isRequired, // Modify the type as per the structure of your city object
+};
 export default CountryItem;
