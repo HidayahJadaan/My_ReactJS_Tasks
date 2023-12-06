@@ -13,4 +13,7 @@ NOTE: index.css --> Global CSS Styling (No Classes)
 --> :global(selector){ Styling....}
 --> .nav :global(.active){Styling...} ==> active class provided externally from react router --> activating the page that is selected now
 
-10. Storing Staes in URLs using React-router capabilites
+10. Storing Staes in URLs using React-router capabilites(params):
+* create new route
+** link to the route
+*** read the state from the URL in that route

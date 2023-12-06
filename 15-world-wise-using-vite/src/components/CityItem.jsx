@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import styles from './CityItem.module.css'
-
+import PropTypes from "prop-types";
+import styles from "./CityItem.module.css";
+import { Link } from "react-router-dom";
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -9,23 +9,22 @@ const formatDate = (date) =>
     year: "numeric",
   }).format(new Date(date));
 
-
-
-export default function CityItem({city}) {
-
-    const {cityName, emoji, date} = city;
+export default function CityItem({ city }) {
+  const { cityName, emoji, date,id } = city;
 
   return (
-    <li className={styles.cityItem}>
-<span className={styles.emoji}>{emoji}</span>
-<h3 className={styles.name}>{cityName}</h3>
-<time className={styles.date}>{formatDate(date)}</time>
-   
-   <button className={styles.deleteBtn}>&times;</button>
-   
+    <li>
+    <Link className={styles.cityItem} to={`${id}`}>
+      <span className={styles.emoji}>{emoji}</span>
+      <h3 className={styles.name}>{cityName}</h3>
+      <time className={styles.date}>{formatDate(date)}</time>
+
+      <button className={styles.deleteBtn}>&times;</button>
+    
+    </Link>
     </li>
-  )
+  );
 }
 CityItem.propTypes = {
-    city: PropTypes.object.isRequired, // Modify the type as per the structure of your city object
-  };
+  city: PropTypes.object.isRequired, // Modify the type as per the structure of your city object
+};
