@@ -3,7 +3,7 @@ import styles from "./Logo.module.css";
 
 function Logo() {
   return <Link to ='/' >
-    <img src="./imgs/logo.png" alt="WorldWise logo" className={styles.logo} />
+    <img src="logo.png" alt="WorldWise logo" className={styles.logo} />
     </Link>
     
 }
