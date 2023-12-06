@@ -17,3 +17,5 @@ NOTE: index.css --> Global CSS Styling (No Classes)
 * create new route
 ** link to the route
 *** read the state from the URL in that route
+
+11. useNavigate, </Navigate>, useParams, useSearchParams 
