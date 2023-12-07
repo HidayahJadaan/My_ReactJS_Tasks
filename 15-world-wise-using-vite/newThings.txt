@@ -19,3 +19,4 @@ NOTE: index.css --> Global CSS Styling (No Classes)
 *** read the state from the URL in that route
 
 11. useNavigate, </Navigate>, useParams, useSearchParams 
+12. npm install react-leaflet leaflet ===> Map Component
