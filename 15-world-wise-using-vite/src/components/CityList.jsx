@@ -26,4 +26,5 @@ CityList.propTypes = {
     isLoading: PropTypes.bool.isRequired,
   };
   
+  
 export default CityList;
