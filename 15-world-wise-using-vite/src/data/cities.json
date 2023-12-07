@@ -47,54 +47,6 @@
         "lng": "-2.13128394200588"
       },
       "id": 98443198
-    },
-    {
-      "cityName": "Valeras, Las",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2023-12-07T20:02:38.150Z",
-      "notes": "helllo",
-      "position": {
-        "lat": "39.825413103424786",
-        "lng": "-2.1313476562500004"
-      },
-      "id": 98443199
-    },
-    {
-      "cityName": "Alhambra",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2023-12-07T20:07:48.500Z",
-      "notes": "fdfdfdf",
-      "position": {
-        "lat": "38.92522904714054",
-        "lng": "-3.09814453125"
-      },
-      "id": 98443200
-    },
-    {
-      "cityName": "Mertola",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2023-12-07T20:09:06.391Z",
-      "notes": "rererer",
-      "position": {
-        "lat": "37.64903402157866",
-        "lng": "-7.756347656250001"
-      },
-      "id": 98443201
-    },
-    {
-      "cityName": "Bordj El Houasse",
-      "country": "Algeria",
-      "emoji": "🇩🇿",
-      "date": "2023-12-07T20:09:44.552Z",
-      "notes": "ererer",
-      "position": {
-        "lat": "24.766784522874453",
-        "lng": "7.470703125000001"
-      },
-      "id": 98443202
     }
   ]
 }

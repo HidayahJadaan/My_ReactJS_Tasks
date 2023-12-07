@@ -138,7 +138,7 @@ function Form() {
       </div>
 
       <div className={styles.buttons}>
-        <Button type="primary">Add</Button>
+      <Button type="primary" onClick={() => {}}>Add</Button>
         <BackButton />
       </div>
     </form>

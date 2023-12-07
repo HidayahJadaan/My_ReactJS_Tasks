@@ -19,7 +19,7 @@ import Button from "./Button";
 
 function Map() {
   const { cities } = useCities();
-  const [mapPosition, setMapPosition] = useState([40, 0]);
+  const [mapPosition, setMapPosition] = useState([40, 0]); // Ensure the initial values are numbers
   const {
     isLoading: isLoadingPosition,
     position: geolocationPosition,
@@ -27,12 +27,10 @@ function Map() {
   } = useGeolocation();
   const [mapLat, mapLng] = useUrlPosition();
 
-  useEffect(
-    function () {
-      if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
-    },
-    [mapLat, mapLng]
-  );
+  useEffect(function () {
+    if (mapLat && mapLng) setMapPosition([parseFloat(mapLat), parseFloat(mapLng)]);
+  }, [mapLat, mapLng]);
+  
 
   useEffect(
     function () {
