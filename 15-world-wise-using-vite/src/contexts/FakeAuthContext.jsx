@@ -1,56 +1,48 @@
-import { useContext, useReducer } from "react";
+import PropTypes from 'prop-types';
+import { createContext, useContext, useReducer } from "react";
 
-const AuthContext = useContext();
-const FAKE_USER = {
-    name: "Jack",
-    email: "jack@example.com",
-    password: "qwerty",
-    avatar: "https://i.pravatar.cc/100?u=zz",
-  };
+const AuthContext = createContext();
 
-  
-  const initialState = {
-    user: null,
-    isAuthintecated: false,
-  };
+const initialState = {
+  user: null,
+  isAuthenticated: false,
+};
 
-  function reducer(state, action) {
-    switch (action.type) {
-      case "login":
-        return {
-          user: action.payload,
-          isAuthintecated: true,
-        };
-
-      case "logout":
-        return {
-          ...state,
-          user: null,
-          isAuthintecated: false,
-        };
-      default:
-        throw new Error("UNKOWN ACTION");
-    }
+function reducer(state, action) {
+  switch (action.type) {
+    case "login":
+      return { ...state, user: action.payload, isAuthenticated: true };
+    case "logout":
+      return { ...state, user: null, isAuthenticated: false };
+    default:
+      throw new Error("Unknown action");
   }
+}
 
-
+const FAKE_USER = {
+  name: "Hidayah",
+  email: "hidayah@example.com",
+  password: "qwerty",
+  avatar: "https://i.pravatar.cc/100?u=wo",
+};
 
 function AuthProvider({ children }) {
-  const [{ user, isAuthintecated }, dispatch] = useReducer(
+  const [{ user, isAuthenticated }, dispatch] = useReducer(
     reducer,
     initialState
   );
 
-
-  // Always be updated at the same time --< useReducer()
   function login(email, password) {
-    if(email === FAKE_USER.email && password=== FAKE_USER.password)
-    dispatch({type:"login", payload: FAKE_USER})
+    if (email === FAKE_USER.email && password === FAKE_USER.password)
+      dispatch({ type: "login", payload: FAKE_USER });
   }
-  function logout() {}
+
+  function logout() {
+    dispatch({ type: "logout" });
+  }
 
   return (
-    <AuthContext.Provider value={{ user, isAuthintecated, login, logout }}>
+    <AuthContext.Provider value={{ user, isAuthenticated, login, logout }}>
       {children}
     </AuthContext.Provider>
   );
@@ -58,9 +50,15 @@ function AuthProvider({ children }) {
 
 function useAuth() {
   const context = useContext(AuthContext);
-
-  if (contex === undefined)
+  if (context === undefined)
     throw new Error("AuthContext was used outside AuthProvider");
+  return context;
 }
 
-export {AuthProvider, useAuth}
+
+
+AuthProvider.propTypes = {
+    children: PropTypes.node.isRequired,
+};
+
+export { AuthProvider, useAuth };

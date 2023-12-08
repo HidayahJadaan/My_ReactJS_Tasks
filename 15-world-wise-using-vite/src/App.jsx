@@ -10,38 +10,41 @@ import CountriesList from "./components/CountriesList";
 import City from "./components/City";
 import Form from "./components/Form";
 import { CitiesProvider } from "./contexts/CitiesContext";
+import { AuthProvider } from "./contexts/FakeAuthContext";
 
 function App() {
   return (
-    <CitiesProvider>
-      <BrowserRouter>
-        {/* This will always be on the page
+    <AuthProvider>
+      <CitiesProvider>
+        <BrowserRouter>
+          {/* This will always be on the page
 <h1>Hello Router!!</h1> */}
-        <Routes>
-          <Route index element={<HomePage />} />
-          <Route path="product" element={<Product />} />
-          <Route path="pricing" element={<Pricing />} />
-          <Route path="login" element={<Login />} />
-          <Route path="app" element={<AppLayout />}>
-            <Route path="*" element={<PageNotFound />} />
-            {/* =============== Nested Routes  =================== */}
+          <Routes>
+            <Route index element={<HomePage />} />
+            <Route path="product" element={<Product />} />
+            <Route path="pricing" element={<Pricing />} />
+            <Route path="login" element={<Login />} />
+            <Route path="app" element={<AppLayout />}>
+              <Route path="*" element={<PageNotFound />} />
+              {/* =============== Nested Routes  =================== */}
 
-            {/* ============= Index Routes: The default child route if non of these routes are matches */}
+              {/* ============= Index Routes: The default child route if non of these routes are matches */}
 
-            <Route index element={<Navigate replace to="cities" />} />
-            <Route path="cities" element={<CityList />} />
-            {/* ============================= useParams() =================================== */}
-            <Route path="cities/:id" element={<City />} />
-            {/* ============================================================================= */}
+              <Route index element={<Navigate replace to="cities" />} />
+              <Route path="cities" element={<CityList />} />
+              {/* ============================= useParams() =================================== */}
+              <Route path="cities/:id" element={<City />} />
+              {/* ============================================================================= */}
 
-            <Route path="countries" element={<CountriesList />} />
+              <Route path="countries" element={<CountriesList />} />
 
-            <Route path="form" element={<Form />} />
-            {/* ======================= elemnt here not an component  ============================ */}
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </CitiesProvider>
+              <Route path="form" element={<Form />} />
+              {/* ======================= elemnt here not an component  ============================ */}
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </CitiesProvider>
+    </AuthProvider>
   );
 }
 export default App;
