@@ -22,3 +22,9 @@ NOTE: index.css --> Global CSS Styling (No Classes)
 12. npm install react-leaflet leaflet ===> Map Component
 13. Creating Custom Hook In Top Of Custom Hook (useURLPosition)--> it's fine
 14. npm install react-datepicker
+
+================================================================
+#Fake Authentication:
+1. Get user's email and password from a login and check with an API endpoint if the pass is correct.
+2. If the credentials are correct, we then redirect the user to our main application and save it in the user state.
+3. protect the application from un-authorized access.  
