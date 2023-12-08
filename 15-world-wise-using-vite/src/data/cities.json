@@ -35,6 +35,42 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+    {
+      "cityName": "Encinacorba",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-12-08T14:23:24.493Z",
+      "notes": "dsdsd",
+      "position": {
+        "lat": "41.29431726315258",
+        "lng": "-1.2524414062500002"
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "Rebourguil",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2023-12-08T14:23:32.314Z",
+      "notes": "dsdsdsd",
+      "position": {
+        "lat": "43.89789239125797",
+        "lng": "2.7465820312500004"
+      },
+      "id": 98443199
+    },
+    {
+      "cityName": "Radomyshl",
+      "country": "Ukraine",
+      "emoji": "🇺🇦",
+      "date": "2023-12-08T14:23:41.347Z",
+      "notes": "ssdsds",
+      "position": {
+        "lat": "50.51342652633956",
+        "lng": "29.091796875"
+      },
+      "id": 98443200
     }
   ]
 }
